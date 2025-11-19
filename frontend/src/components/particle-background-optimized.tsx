@@ -734,6 +734,7 @@ export default function OptimizedParticleAnimation() {
     previousMouseY: number;
     particleCount: number;
     isGenerated: boolean;
+    lastFrameTime?: number;
   } | null>(null);
 
   /**
@@ -1047,7 +1048,7 @@ export default function OptimizedParticleAnimation() {
         let currentIndex = 0;
 
         const processBatch = () => {
-          const endIndex = Math.min(currentIndex + batchSize, particleCount);
+          const endIndex = Math.min(currentIndex + Math.min(batchSize, 200), particleCount);
 
           for (let j = currentIndex; j < endIndex; j++) {
             const idx = j * 3;
@@ -1136,7 +1137,13 @@ export default function OptimizedParticleAnimation() {
         processBatch();
       };
 
-      processParticlesInBatches();
+      // Throttle animation to prevent performance issues
+      if (currentTime - (sceneRef.current.lastFrameTime || 0) > 16) {
+        sceneRef.current.lastFrameTime = currentTime;
+        processParticlesInBatches();
+      } else {
+        animationRef.current = requestAnimationFrame(animate);
+      }
     };
 
     // Start animation loop
