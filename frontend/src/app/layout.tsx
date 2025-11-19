@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
+        <meta httpEquiv="Content-Security-Policy" content="media-src 'self' https://cdn.pixabay.com https://*.pixabay.com blob: data:;" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
