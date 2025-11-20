@@ -49,6 +49,12 @@ Start-Process powershell -ArgumentList @(
 )
 
 Write-Host ""
-Write-Host "Application started successfully!" -ForegroundColor Green
-Write-Host "   Backend:  http://localhost:3001" -ForegroundColor White
-Write-Host "   Frontend: http://localhost:5000" -ForegroundColor White
+Write-Host "=== The Copy Application Started Successfully! ===" -ForegroundColor Green
+Write-Host ""
+Write-Host "   🚀 Frontend: http://localhost:5000" -ForegroundColor Cyan
+Write-Host "   ⚙️  Backend:  http://localhost:3001" -ForegroundColor Cyan
+Write-Host "   📊 Metrics:  http://localhost:3001/metrics" -ForegroundColor Yellow
+Write-Host "   🔧 Queues:   http://localhost:3001/admin/queues" -ForegroundColor Yellow
+Write-Host ""
+Write-Host "   To stop: pnpm end" -ForegroundColor Magenta
+Write-Host "============================================" -ForegroundColor Green

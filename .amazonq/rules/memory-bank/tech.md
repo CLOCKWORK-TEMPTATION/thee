@@ -1,345 +1,183 @@
 # Technology Stack - The Copy
 
-## Programming Languages
+## Programming Languages & Versions
+- **TypeScript**: 5.7.2 (Frontend), 5.0+ (Backend)
+- **JavaScript**: ES2022+ with modern features
+- **Node.js**: 20.11.0+ (LTS required)
+- **Package Manager**: pnpm 10.20.0
 
-### TypeScript 5.7+
-- **Primary Language**: Used throughout frontend and backend
-- **Strict Mode**: Enabled for type safety
-- **Configuration**: Separate tsconfig.json for frontend/backend
-- **Features Used**: Generics, utility types, type guards, discriminated unions
-
-### JavaScript
-- **Build Scripts**: Node.js scripts for automation
-- **Legacy Code**: Some static assets (actorai-arabic/static-source)
-
-## Frontend Technologies
+## Frontend Technology Stack
 
 ### Core Framework
-- **Next.js 15.4.7**: React framework with App Router
-- **React 18.3.1**: UI library with concurrent features
-- **Node.js 20.11.0+**: Runtime requirement
+- **Next.js**: 15.0.0 with App Router
+- **React**: 18.3.1 with concurrent features
+- **TypeScript**: Strict mode with comprehensive typing
 
 ### UI & Styling
-- **Tailwind CSS 4.1.16**: Utility-first CSS framework
-- **shadcn/ui**: Component library built on Radix UI
-- **Radix UI**: Accessible component primitives
-- **Framer Motion 11.0**: Animation library
-- **GSAP 3.13**: Advanced animations
-- **Three.js 0.180**: 3D graphics (particle effects)
+- **Tailwind CSS**: 4.1.16 with custom configuration
+- **shadcn/ui**: Component library with Radix UI primitives
+- **Framer Motion**: 11.0.0 for animations
+- **GSAP**: 3.13.0 for advanced animations
+- **Three.js**: 0.180.0 for 3D graphics
 
-### State Management & Data Fetching
-- **React Hooks**: useState, useEffect, useContext, custom hooks
-- **Zustand 5.0.8**: Lightweight state management
-- **TanStack Query 5.90.6**: Server state management
-- **React Hook Form 7.54.2**: Form handling
+### State & Data Management
+- **React Query**: @tanstack/react-query 5.90.10
+- **Zustand**: 5.0.8 for global state
+- **React Hook Form**: 7.54.2 with Zod validation
+- **Zod**: 3.23.8 for schema validation
 
-### Validation & Types
-- **Zod 3.25.76**: Schema validation
-- **Drizzle Zod 0.8.3**: Database schema to Zod conversion
+### AI & Processing
+- **Google Genkit**: 1.23.0 for AI workflows
+- **Google Generative AI**: 0.24.1 for Gemini API
+- **PDF Processing**: pdfjs-dist 4.4.168
+- **Document Processing**: mammoth 1.7.0
 
-### AI Integration
-- **Genkit 1.20.0**: AI framework
-- **@genkit-ai/google-genai**: Google Gemini integration
-- **@google/generative-ai 0.24.1**: Gemini API client
-
-### Document Processing
-- **pdfjs-dist 4.4.168**: PDF parsing
-- **mammoth 1.7.0**: DOCX parsing
-- **dompurify 3.3.0**: HTML sanitization
-
-### Development Tools
-- **Vitest 2.1.8**: Unit testing framework
-- **Playwright 1.49.1**: E2E testing
-- **ESLint 9.17.0**: Code linting
-- **Prettier 3.6.2**: Code formatting
-- **TypeScript 5.7.2**: Type checking
-
-### Build & Optimization
-- **@next/bundle-analyzer**: Bundle size analysis
-- **sharp 0.34.5**: Image optimization
-- **PostCSS**: CSS processing
-- **cssnano**: CSS minification
-
-### Monitoring
-- **@sentry/nextjs 8.47.0**: Error tracking
-- **web-vitals 4.2.4**: Performance metrics
-- **Lighthouse CI**: Performance auditing
-
-## Backend Technologies
+## Backend Technology Stack
 
 ### Core Framework
-- **Node.js 20+**: JavaScript runtime
-- **Express.js 4.18.2**: Web framework
-- **TypeScript 5.0+**: Type safety
+- **Express.js**: 5.1.0 with TypeScript
+- **Node.js**: 20+ with ES modules support
 
 ### Database & ORM
-- **PostgreSQL**: Primary database (Neon Serverless)
-- **Drizzle ORM 0.44.7**: TypeScript ORM
-- **drizzle-kit 0.31.6**: Schema management and migrations
-- **@neondatabase/serverless 1.0.2**: Neon database driver
+- **PostgreSQL**: Neon Serverless database
+- **Drizzle ORM**: 0.44.7 with TypeScript integration
+- **Drizzle Kit**: 0.31.7 for migrations
 
 ### Caching & Queues
-- **Redis 5.9.0**: In-memory cache and message broker
-- **BullMQ 5.63.0**: Job queue system
-- **@bull-board/express 6.14.0**: Queue monitoring UI
-
-### Real-time Communication
-- **Socket.IO 4.8.1**: WebSocket library
-- **Server-Sent Events**: Built-in HTTP streaming
-
-### AI Integration
-- **@google/generative-ai 0.24.1**: Google Gemini API
-- **@modelcontextprotocol/sdk 1.20.2**: MCP server
+- **Redis**: 5.10.0 for caching and sessions
+- **BullMQ**: 5.63.2 for background job processing
+- **Bull Board**: 6.14.2 for queue monitoring
 
 ### Authentication & Security
-- **jsonwebtoken 9.0.2**: JWT tokens
-- **bcrypt 6.0.0**: Password hashing
-- **helmet 7.1.0**: Security headers
-- **cors 2.8.5**: CORS middleware
-- **express-rate-limit 7.1.5**: Rate limiting
-- **zod 3.25.76**: Input validation
-
-### Document Processing
-- **pdfjs-dist 4.4.168**: PDF parsing
-- **mammoth 1.7.0**: DOCX parsing
-- **multer 2.0.2**: File upload handling
+- **JWT**: jsonwebtoken 9.0.2
+- **bcrypt**: 6.0.0 for password hashing
+- **Helmet**: 8.1.0 for security headers
+- **CORS**: 2.8.5 with strict policies
+- **Rate Limiting**: express-rate-limit 8.2.1
 
 ### Monitoring & Logging
-- **@sentry/node 10.23.0**: Error tracking
-- **@sentry/profiling-node 10.23.0**: Performance profiling
-- **winston 3.11.0**: Logging library
-- **prom-client 15.1.3**: Prometheus metrics
+- **Sentry**: 10.26.0 for error tracking
+- **Winston**: 3.11.0 for logging
+- **Prometheus**: prom-client 15.1.3 for metrics
 
-### Testing
-- **Vitest 4.0.2**: Unit testing
-- **@vitest/coverage-v8 4.0.2**: Code coverage
-- **supertest 7.1.3**: HTTP testing
+## Development Tools
 
-### Development Tools
-- **tsx 4.7.0**: TypeScript execution
-- **tsc-watch 7.2.0**: TypeScript watch mode
-- **ESLint 9.17.0**: Code linting
-- **@typescript-eslint**: TypeScript ESLint plugins
+### Build & Bundling
+- **Next.js Build**: Production optimization
+- **Bundle Analyzer**: @next/bundle-analyzer 16.0.3
+- **TypeScript Compiler**: tsc with strict mode
+- **PostCSS**: 8+ with Tailwind processing
 
-### Utilities
-- **dotenv 16.5.0**: Environment variables
-- **uuid 13.0.0**: UUID generation
-- **compression 1.7.4**: Response compression
-- **cookie-parser 1.4.7**: Cookie parsing
-- **express-session 1.18.2**: Session management
+### Testing Framework
+- **Vitest**: 4.0.6 (Backend), 2.1.8 (Frontend)
+- **Playwright**: 1.49.1 for E2E testing
+- **Testing Library**: React testing utilities
+- **Coverage**: @vitest/coverage-v8
 
-## DevOps & Infrastructure
+### Code Quality
+- **ESLint**: 8.57.0 with TypeScript rules
+- **Prettier**: 3.6.2 for code formatting
+- **Husky**: 9.1.7 for git hooks
+- **lint-staged**: 15.2.10 for pre-commit checks
 
-### Package Management
-- **pnpm 10.20.0**: Fast, disk-efficient package manager
-- **pnpm workspaces**: Monorepo management
-
-### Containerization
-- **Docker**: Container runtime
-- **Docker Compose**: Multi-container orchestration
-- **Redis Container**: Development cache
-- **PostgreSQL Container**: Development database (optional)
-
-### CI/CD
-- **GitHub Actions**: Automated workflows
-- **Husky 9.1.7**: Git hooks
-- **lint-staged 15.2.10**: Pre-commit linting
-
-### Monitoring Stack
-- **Prometheus**: Metrics collection
-- **Grafana**: Metrics visualization
-- **Sentry**: Error tracking and APM
-- **Bull Board**: Queue monitoring
-
-### Deployment
-- **Vercel**: Frontend hosting (Next.js)
-- **Custom VPS**: Backend hosting
-- **Neon**: Serverless PostgreSQL
-- **Redis Cloud**: Production cache (optional)
+### Performance & Optimization
+- **Lighthouse CI**: @lhci/cli 0.15.1
+- **Sharp**: 0.34.5 for image optimization
+- **Compression**: 1.7.4 for gzip
+- **Bundle Analysis**: Custom performance budgets
 
 ## Development Commands
 
 ### Root Level (Monorepo)
 ```bash
-pnpm install              # Install all dependencies
-pnpm start:dev            # Start both frontend and backend
-pnpm kill:dev             # Stop all development servers
-pnpm start:redis          # Start Redis server (Windows)
-pnpm lint                 # Lint frontend code
-pnpm test                 # Run frontend tests
-pnpm build                # Build frontend
-pnpm ci                   # Full CI pipeline
-```
+# Start development servers
+pnpm start:dev
 
-### Backend Commands
-```bash
-cd backend
+# Install dependencies
+pnpm install
 
-# Development
-pnpm dev                  # Start dev server with watch mode
-pnpm dev:mcp              # Start MCP server in watch mode
-pnpm build                # Compile TypeScript
-pnpm start                # Start production server
+# Run tests across packages
+pnpm test
 
-# Database
-pnpm db:generate          # Generate Drizzle migrations
-pnpm db:push              # Push schema to database
-pnpm db:studio            # Open Drizzle Studio
+# Build all packages
+pnpm build
 
-# Performance Analysis
-pnpm perf:setup           # Setup performance testing
-pnpm perf:seed            # Seed test data
-pnpm perf:baseline        # Run baseline performance tests
-pnpm perf:apply-indexes   # Apply database indexes
-pnpm perf:post-optimization  # Run post-optimization tests
-pnpm perf:compare         # Compare performance results
-
-# Testing
-pnpm test                 # Run unit tests
-pnpm test:coverage        # Run tests with coverage
-
-# Code Quality
-pnpm lint                 # Run ESLint
-pnpm lint:fix             # Fix ESLint issues
-pnpm typecheck            # Type check without emitting
+# Lint all packages
+pnpm lint
 ```
 
 ### Frontend Commands
 ```bash
-cd frontend
+# Development server
+pnpm dev                    # Port 5000
 
-# Development
-pnpm dev                  # Start dev server (port 5000)
-pnpm dev:fallback         # Start with fallback handling
-pnpm build                # Production build
-pnpm start                # Start production server
-pnpm analyze              # Analyze bundle size
-
-# AI Development
-pnpm genkit:dev           # Start Genkit dev server
-pnpm genkit:watch         # Start Genkit with watch mode
+# Build & deployment
+pnpm build                  # Production build
+pnpm start                  # Production server
+pnpm analyze                # Bundle analysis
 
 # Testing
-pnpm test                 # Run unit tests
-pnpm test:smoke           # Run smoke tests
-pnpm test:watch           # Run tests in watch mode
-pnpm test:coverage        # Run tests with coverage
-pnpm test:ui              # Open Vitest UI
-pnpm e2e                  # Run E2E tests
-pnpm e2e:ui               # Run E2E tests with UI
-pnpm e2e:debug            # Debug E2E tests
-
-# Code Quality
-pnpm lint                 # Run ESLint
-pnpm lint:fix             # Fix ESLint issues
-pnpm format               # Format code with Prettier
-pnpm format:check         # Check code formatting
-pnpm typecheck            # Type check without emitting
+pnpm test                   # Unit tests
+pnpm e2e                    # E2E tests
+pnpm test:coverage          # Coverage report
 
 # Performance
-pnpm lighthouse           # Run Lighthouse CI
-pnpm budget:check         # Check performance budget
-pnpm budget:report        # Generate budget report
-pnpm performance:report   # Generate performance report
-
-# Build & Deploy
-pnpm prebuild             # Generate pages manifest
-pnpm build:production     # Production build with optimizations
-pnpm sentry:sourcemaps    # Upload sourcemaps to Sentry
+pnpm lighthouse             # Lighthouse audit
+pnpm budget:check           # Performance budget
 ```
 
-## Environment Variables
-
-### Backend (.env)
+### Backend Commands
 ```bash
-# Server
-NODE_ENV=development
-PORT=3001
-FRONTEND_URL=http://localhost:5000
+# Development
+pnpm dev                    # Watch mode with tsc-watch
 
 # Database
-DATABASE_URL=postgresql://user:pass@host/db
+pnpm db:push                # Apply schema changes
+pnpm db:studio              # Drizzle Studio GUI
+pnpm db:generate            # Generate migrations
+
+# Testing & Quality
+pnpm test                   # Vitest tests
+pnpm lint                   # ESLint check
+pnpm typecheck              # TypeScript check
+```
+
+## Environment Configuration
+
+### Required Environment Variables
+```bash
+# Database
+DATABASE_URL=postgresql://...
+NEON_DATABASE_URL=postgresql://...
+
+# AI Services
+GOOGLE_GENERATIVE_AI_API_KEY=...
+GEMINI_API_KEY=...
 
 # Redis
-REDIS_HOST=localhost
-REDIS_PORT=6379
-REDIS_PASSWORD=
+REDIS_URL=redis://localhost:6379
 
-# JWT
-JWT_SECRET=your-secret-key
-JWT_EXPIRES_IN=7d
+# Authentication
+JWT_SECRET=...
+SESSION_SECRET=...
 
-# Google Gemini
-GEMINI_API_KEY=your-api-key
-
-# Sentry
-SENTRY_DSN=your-sentry-dsn
-SENTRY_ENVIRONMENT=development
+# Monitoring
+SENTRY_DSN=...
+SENTRY_ORG=...
+SENTRY_PROJECT=...
 ```
 
-### Frontend (.env.local)
-```bash
-# API
-NEXT_PUBLIC_API_URL=http://localhost:3001
+### Development Setup
+1. **Node.js 20+** installation required
+2. **pnpm** as package manager
+3. **PostgreSQL** database (Neon recommended)
+4. **Redis** server for caching
+5. **Environment files** configuration
 
-# Sentry
-NEXT_PUBLIC_SENTRY_DSN=your-sentry-dsn
-SENTRY_AUTH_TOKEN=your-auth-token
-
-# Gemini
-NEXT_PUBLIC_GEMINI_API_KEY=your-api-key
-```
-
-## Build System
-
-### Frontend Build
-- **Compiler**: Next.js compiler (SWC)
-- **Bundler**: Webpack (Next.js default)
-- **Output**: `.next/` directory
-- **Optimizations**: Code splitting, tree shaking, minification
-- **Static Export**: Supports static HTML export
-
-### Backend Build
-- **Compiler**: TypeScript compiler (tsc)
-- **Output**: `dist/` directory
-- **Watch Mode**: tsc-watch for development
-- **Module System**: CommonJS
-
-### Asset Optimization
-- **Images**: Sharp for optimization
-- **CSS**: PostCSS with cssnano
-- **JavaScript**: Terser minification
-- **Fonts**: Self-hosted with optimization
-
-## Version Requirements
-
-### Minimum Versions
-- Node.js: 20.11.0+
-- npm: 10.0.0+
-- pnpm: 10.20.0
-- TypeScript: 5.0+
-- PostgreSQL: 14+
-- Redis: 6.0+
-
-### Recommended Versions
-- Node.js: 20.x LTS
-- pnpm: Latest stable
-- PostgreSQL: 15+ (Neon Serverless)
-- Redis: 7.x
-
-## Browser Support
-
-### Frontend
-- Chrome/Edge: Last 2 versions
-- Firefox: Last 2 versions
-- Safari: Last 2 versions
-- Mobile browsers: iOS Safari 14+, Chrome Android 90+
-
-### Features Used
-- ES2020+ syntax
-- CSS Grid and Flexbox
-- WebSocket API
-- EventSource (SSE)
-- Web Vitals API
-- Intersection Observer
-- ResizeObserver
+## Deployment Architecture
+- **Frontend**: Vercel deployment with Edge Runtime
+- **Backend**: Custom server deployment
+- **Database**: Neon PostgreSQL serverless
+- **Cache**: Redis Cloud or self-hosted
+- **Monitoring**: Sentry + Prometheus + Grafana
+- **CDN**: Vercel Edge Network

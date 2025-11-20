@@ -1,5 +1,6 @@
 # Kill processes on ports 3001 and 5000
-Write-Host "Stopping services..." -ForegroundColor Yellow
+Write-Host "=== Stopping The Copy Services ===" -ForegroundColor Yellow
+Write-Host ""
 
 # Kill port 3001 (Backend)
 $port3001 = Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue
@@ -21,4 +22,15 @@ if ($port5000) {
     }
 }
 
-Write-Host "All services stopped!" -ForegroundColor Green
+# Kill Redis processes
+$redisProcesses = Get-Process -Name "redis-server" -ErrorAction SilentlyContinue
+if ($redisProcesses) {
+    foreach ($process in $redisProcesses) {
+        Write-Host "Killing Redis process $($process.Id)..." -ForegroundColor Cyan
+        Stop-Process -Id $process.Id -Force -ErrorAction SilentlyContinue
+    }
+}
+
+Write-Host ""
+Write-Host "=== All The Copy Services Stopped! ===" -ForegroundColor Green
+Write-Host "   To start again: pnpm start" -ForegroundColor Magenta
