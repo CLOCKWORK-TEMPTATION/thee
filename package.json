@@ -20,6 +20,7 @@
     "check:exports": "node scripts/check-duplicate-exports.mjs",
     "check:exports:json": "node scripts/check-duplicate-exports.mjs --output json",
     "check:exports:fix": "node scripts/check-duplicate-exports.mjs --fix",
+    "approve-builds": "node scripts/approve-build-warnings.js",
     "dev": "npm run start:dev",
     "preview": "pnpm --filter nextn start"
   },

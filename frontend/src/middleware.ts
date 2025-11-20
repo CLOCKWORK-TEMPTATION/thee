@@ -21,6 +21,7 @@ export function middleware(request: NextRequest) {
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com https://r2cdn.perplexity.ai data:",
     "img-src 'self' data: blob: https: https://placehold.co https://images.unsplash.com https://picsum.photos",
+    "media-src 'self' https://cdn.pixabay.com https://*.pixabay.com blob: data:",
   ];
 
   // Build connect-src with dev origin support
